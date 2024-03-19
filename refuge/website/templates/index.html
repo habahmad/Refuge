@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../static/style.css">
+    <link href="https://db.onlinewebfonts.com/c/bc229d0cbaf57b9531e961c076963c0a?family=a3+Italic" rel="stylesheet" type="text/css"/>
+    <title>Refuge</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}" ></script>
+</head>
+<body>
+    <div class="navbar">
+        <div id="header">
+            <div id="logo">
+                <img src="../static/logo.png" id="logo"/>
+                <div id="padding">
+                </div>
+            </div>
+        <div class="navbar-left">
+            <a class="nav-item nav-link" id="index" href="/">Home</a>
+            <a class="nav-item nav-link" id="entries" href="/entries">Saved Entries</a>
+            <a class="nav-item nav-link" id="about" href="/about">About</a>
+
+        </div>
+    <div>
+        <div class="container">
+            <div class="green-box">
+                <div class="content">
+                    <form method="POST"> 
+                        <textarea name="entry" id="entry" class="coloured-textbox" placeholder="How are you doing today?" rows="4" cols="50" wrap="soft"></textarea>
+                        <button class="save-button" type="save">Save</button>
+                    </form>
+                    <form id="mood" method="POST" onsubmit="submitForm(event)">
+                        <p>Select Mood:</p>
+                        <div class="round-button">
+                            <label class="hbutton">
+                                <input type="radio" name="category" value="happy">
+                                <div class="button-img">
+                                    <img src="../static/happy.jpg" alt="happy"/>
+                                </div>
+                            </label>
+                            <label class="sbutton">
+                                <input type="radio" name="category" value="sad">
+                                <div class="button-img">
+                                    <img src="../static/sad.jpg" alt="sad"/>
+                                </div>
+                            </label>
+                            <label class="cbutton">
+                                <input type="radio" name="category" value="content">
+                                <div class="button-img">
+                                    <img src="../static/content.png" alt="content"/>
+                                </div>
+                            </label>
+                        <br>
+                    
+                    </div>
+                </div>
+            </div>
+                            <div class="button-container">
+                                <button type="submit" class="enter-button", onclick="revealmsg('{{ response }}')">Enter</button>
+                            </div>
+                    </form>
+    </div>
+    <div id="response" style="display: none;">
+        <div class="content">
+            <div id="character">
+                <img src="../static/iroh.png" id="character"/>
+                <p id="name"> Uncle Iroh </p>
+            </div>
+            <hr class="underline">
+            <p id="dialogue"> 
+                [Responses randomly chosen from an SQL database will be displayed here based on the mood selected by the user.]
+            </p>
+        <button class="close-button", onclick="closemsg()">Close</button>
+        </div>
+    </div>
+</body>
+</html>

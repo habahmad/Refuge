@@ -1,0 +1,266 @@
+body{
+    margin: 36px;
+    font-family: "a3 Italic";
+    background-image: url('forest.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    opacity: 0.8; /* Set the opacity of the background image */
+}
+
+#header{
+    background-color: rgb(252, 252, 224);
+    height: 100px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+#logo{
+    width: 230px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+
+.navbar{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.navbar-left div{ 
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(199, 198, 80);
+    
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left > * {
+    padding: 35px;
+}
+
+#about, #index, #entries{
+    color: rgb(199, 198, 80);
+    font-size: 25px;
+}
+
+.container {
+    position: relative;
+    padding: 10px;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    bottom: 50px;
+    left: 500px;
+}
+
+.holder{
+    padding: 50px;
+    align-items: center;
+}
+
+p{
+    font-size: 18px;
+}
+
+.big-green-box{
+    position: relative;
+    background-color: rgb(199, 198, 80);
+    padding: 10px;
+    width: 1200px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.green-box {
+    position: relative;
+    background-color: rgb(199, 198, 80);
+    padding: 50px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: center;
+}
+
+.coloured-textbox {
+    background-color: rgb(252, 252, 224);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/*smiley check box styling section*/
+
+.round-button {
+    display: flex;
+    position: absolute;
+    bottom: 35px;
+    left: 95px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: none;
+}
+
+.hbutton, .sbutton, .cbutton{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.hbutton:active, .sbutton:active, .cbutton:active{
+    transform: scale(0.96);
+}
+
+.hbutton input, .sbutton input, .cbutton input{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hbutton input:checked ~ .button-img{
+    border-color: rgb(16, 61, 17);
+}
+
+.sbutton input:checked ~ .button-img{
+    border-color: rgb(16, 61, 17);
+}
+
+.cbutton input:checked ~ .button-img{
+    border-color: rgb(16, 61, 17);
+}
+
+.hbutton .button-img{
+    cursor: pointer;
+    height: 100%;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+}
+
+.sbutton .button-img{
+    cursor: pointer;
+    height: 100%;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+}
+
+.cbutton .button-img{
+    cursor: pointer;
+    height: 100%;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+}
+
+.hbutton img, .sbutton img, .cbutton img {
+    height: 100%;
+    width: 50px;
+    left: 50%;
+}
+
+/*save and finish button styling section*/
+
+.button-container {
+    position: absolute;
+    bottom: 60px;
+    left: 150px;
+}
+
+
+.enter-button, .save-button {
+    background-color: rgb(125,130,47); 
+    color: rgb(252, 252, 224);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.enter-button:active{
+    transform: scale(0.96);
+}
+
+.save-button:active{
+    transform: scale(0.96);
+}
+
+#response{
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+    background-color: rgb(199, 198, 80);
+    padding: 10px;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+#character{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+}
+
+#character img{
+    position: relative;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#name{
+    display: wrap;
+    text-align: center;
+    font-size: small;
+}
+
+#dialogue {
+    display: wrap;
+    text-align: center;
+    font-size: small;
+}
+
+.close{
+    position: absolute;
+}
+
+.close-button {
+    position: absolute;
+    bottom: -40px; /* Adjust positioning as needed */
+    left: 40%;
+    background-color: rgb(125,130,47); 
+    color: rgb(252, 252, 224);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.close-button:active{
+    transform: scale(0.96);
+}
